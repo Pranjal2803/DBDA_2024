@@ -1,0 +1,42 @@
+Definition:- A database management system is the software or technology used to manage information in a database. Some popular databases are MySQL, Oracle, MongoDB, etc. Create database, save to database, update existing database, delete from the database. DBMS is a system that allows you to store, update, and store data in a unified manner. It also ensures the security of the database. A database is a collection of information that can be easily created, modified, accessed, and managed. Data is stored in tables or objects. A tuple (row) represents an entry in the table. DBMS operates on data in the database in queries given by users.
+
+
+Some Advantages of DBMS are: 
+
+Data sharing: Data in the same database can be shared by many users at the same time.
+Data independence: Allows the data structure to change without changing the context of the execution.
+Authentication and encryption are tools used to ensure data security in DBMS.
+
+![1](https://github.com/piyush1shende2/Database-Management-System/assets/163756496/9721859a-053f-46ed-b3c5-877f3cbc3cb7)
+
+
+DBMS Applications:
+Business Information: Sales, Marketing, Human Resources, Manufacturing, Online Sellers.
+Finance: Keeps records of sales and insurance and purchases of securities and bonds.
+Contact: Copayment and medical bills.
+
+
+Disadvantages of DBMS:
+Complexity: DBMS can be difficult to install and maintain, requiring special knowledge and skills.
+level. It is very high, especially for large or complex systems.
+Provide storage services.
+
+
+Various types of DBMS
+Relational DBMS (RDBMS): RDBMS stores data in tables with rows and columns and uses SQL (Structured Query Language) to manage the data.
+OODBMS stores data as objects and can be manipulated using functional expressions.
+NoSQL DBMS: A NoSQL DBMS stores data in non-relational data structures, such as key-value pairs, document-based models, or graph models.
+
+
+Necessary for DBMS:- 
+
+1. Data Integrity and Consistency:
+Data integrity and consistency are very important for every data center. DBMS provides a mechanism to ensure data accuracy and consistency. These procedures include restrictions, triggers, and retention procedures that protect data integrity. DBMS also provides features such as transformations to ensure data changes are atomic, consistent, isolated, and stable (ACID). 
+2. Concurrent data access:
+DBMS provides a concurrent access system that allows multiple users to access data simultaneously. This is especially important for organizations that need real-time data access. A DBMS uses a locking mechanism to ensure that multiple users can access the same data without conflicts or invalid data. Analysis and Reporting:
+DBMS provides tools that support data analysis and reporting. These tools enable organizations to gain insights from data so they can make better decisions. DBMS supports various data analysis methods such as OLAP, data mining, and machine learning. Additionally, DBMS provides features such as data visualization and reporting that allow organizations to present their data in a visual and easy-to-understand way. 
+3. Scalability and Flexibility:
+DBMS provides scalability and flexibility, allowing organizations to manage more data. A DBMS can scale horizontally by adding more servers or vertically by increasing the capacity of existing servers. This makes it easier for organizations to process large amounts of data without disrupting operations. Additionally, a DBMS provides flexibility in data modeling, allowing organizations to modify their data to meet changing business needs.
+4. Cost Efficiency:
+DBMS is cost-effective compared to traditional database systems. They reduce storage costs by eliminating unnecessary materials and improving data storage. They also reduce construction costs by providing design, repair, and maintenance materials. Additionally, DBMS reduces operating costs by automating routine operations and providing self-healing capabilities.
+

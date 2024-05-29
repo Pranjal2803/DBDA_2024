@@ -1,0 +1,42 @@
+A database management system (DBMS) is software designed to manage and organize data in a structured way. It allows users to create, update and query data databases, as well as manage the security and governance of data.
+
+
+The main role of DBMS
+
+Data Modeling: DBMS provides tools to create and modify data models that describe the structure and relationship between data in the database.
+Concurrency control: DBMS provides a mechanism to control access to concurrent data to ensure that multiple users can access the data seamlessly. Tools such as restrictions on data values ​​and access controls that limit who can access data.
+Type: Relational Database Management System (RDBMS) and Non-Relational Database Management System (NoSQL or Non-SQL)
+RDBMS: Data is organized in tables, each table has rows and columns. Data is related to each other through primary keys and foreign keys. Designed to handle large, high-performance situations.
+
+
+Data Definition Language (DDL) stands for Definition, it works with database schemas and descriptions and how data is stored in the database. View, store procedures, operations, and functions)
+
+ALTER: Change the structure of an existing file
+DROP: Remove an item from the file
+TRUNCATE: Remove all data, including those assigned to the table. file All fields will be deleted
+COMMENT: Add comment to data dictionary
+RENAME: Rename Item
+
+
+Data Processing Language (DML) is an abbreviation for Data Processing Language. Save, change, save, delete, etc. Used for SELECT, INSERT, UPDATE, DELETE etc. Executes data, including SQL statements. Update database Information. Data Query Language (DQL) is a group of Data Manipulation Languages. The most common statement in DQL is the SELECT statement. SELECT statement helps to retrieve data from the table without changing anything in the table. Existing records in the table
+
+DELETE: Delete all records in the database
+Merge: UPSERT operation (insert or update)
+CALL: Call PL/SQL or Java subroutine
+Show PLAN: Description of data input method
+LOCK TABLE: Checking the relevant value
+
+
+Data Control Language (DCL) is an abbreviation for Data Control Language based on data access. SELECT, INSERT, DELETE,…) command
+
+REVOKE: Revokes the user's permission to execute DML (SELECT, INSERT, DELETE, ...) commands on a table
+GRANT: grant permissions to the user for running DML(SELECT, INSERT, DELETE,â¦) commands on the table
+
+
+Transaction Control Language (TCL) stands for Transaction Control Language, which is the manager for all types of transaction data and all types of transactions. Some commands of TCL are:
+
+Undo: used to undo or discard changes to a file
+Save: used to apply or save changes to a file
+Save Point: to temporarily store data in the database is used
+
+Role, Data Definition Language, Data Processing Language, Data Control Language, Transaction Control Language

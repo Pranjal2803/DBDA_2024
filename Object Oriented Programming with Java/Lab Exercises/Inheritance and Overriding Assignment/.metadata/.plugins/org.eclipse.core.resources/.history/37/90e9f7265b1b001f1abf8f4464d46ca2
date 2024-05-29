@@ -1,0 +1,6 @@
+package q2;
+
+public interface Shape {
+	abstract double calculateArea();
+
+}

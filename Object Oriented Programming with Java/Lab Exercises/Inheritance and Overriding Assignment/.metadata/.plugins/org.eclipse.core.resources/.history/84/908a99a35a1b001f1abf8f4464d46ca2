@@ -1,0 +1,8 @@
+package q2;
+
+public class Shape {
+	void calculateArea() {
+		System.out.println("Area of different shapes is different");
+	}
+
+}

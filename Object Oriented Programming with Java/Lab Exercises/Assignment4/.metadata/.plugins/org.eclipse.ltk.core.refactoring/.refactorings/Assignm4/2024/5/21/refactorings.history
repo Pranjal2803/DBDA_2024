@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;exception_q.Exception_question&apos; to &apos;ExceptionHandlingDemo&apos;&#x0D;&#x0A;- Original project: &apos;Assignm4&apos;&#x0D;&#x0A;- Original element: &apos;exception_q.Exception_question&apos;&#x0D;&#x0A;- Renamed element: &apos;exception_q.ExceptionHandlingDemo&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Exception_question&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;exception_q{Exception_question.java[Exception_question" matchStrategy="1" name="ExceptionHandlingDemo" qualified="false" references="true" similarDeclarations="false" stamp="1716532967206" textual="false" version="1.0"/>
+</session>

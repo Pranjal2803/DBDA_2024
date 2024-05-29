@@ -1,0 +1,10 @@
+package q1;
+
+public class TestingMain {
+	public static void main(String[] args) {
+		 Animal A1 = new Animal();
+		 System.out.println(A1.makeSound());
+		
+	}
+
+}
