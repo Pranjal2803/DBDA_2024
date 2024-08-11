@@ -1,0 +1,11 @@
+Product Name,Category,Price (per unit),Quantity,Location
+"Apple, ",Fruits,25.0,100.0,Koramangala
+Bananas,Fruits,15.0,150.0,Indiranagar
+Milk,Dairy,30.0,50.0,Jayanagar
+ Bread,Bakery,20.0,,Marathahalli
+ Eggs ,Dairy,40.0,60.0,Whitefield
+ Potatoes,Vegetables,20.0,100.0,
+ Tomatoes,Vegetables,,120.0,Indiranagar
+Onions,Vegetables,10.0,200.0,Jayanagar
+Rice,Grains,50.0,40.0,Marathahalli
+Wheat,Grains,120.0,30.0,Whitefield
