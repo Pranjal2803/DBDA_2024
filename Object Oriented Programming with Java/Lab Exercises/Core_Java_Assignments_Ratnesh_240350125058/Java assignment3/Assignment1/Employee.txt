@@ -1,0 +1,200 @@
+/**
+ * Represents an employee with basic information.
+ */
+public class Employee {
+    private String SSN;
+    private String firstName;
+    private String lastName;
+
+    /**
+     * Constructs an Employee object with the given information.
+     *
+     * @param SSN        The employee's Social Security Number.
+     * @param firstName  The employee's first name.
+     * @param lastName   The employee's last name.
+     */
+    public Employee(String SSN, String firstName, String lastName) {
+        this.SSN = SSN;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    /**
+     * Gets the employee's Social Security Number.
+     *
+     * @return The employee's SSN.
+     */
+    public String getSSN() {
+        return SSN;
+    }
+
+    /**
+     * Sets the employee's Social Security Number.
+     *
+     * @param SSN The new SSN for the employee.
+     */
+    public void setSSN(String SSN) {
+        this.SSN = SSN;
+    }
+
+    /**
+     * Gets the employee's first name.
+     *
+     * @return The employee's first name.
+     */
+    public String getFirstName() {
+        return firstName;
+    }
+
+    /**
+     * Sets the employee's first name.
+     *
+     * @param firstName The new first name for the employee.
+     */
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    /**
+     * Gets the employee's last name.
+     *
+     * @return The employee's last name.
+     */
+    public String getLastName() {
+        return lastName;
+    }
+
+    /**
+     * Sets the employee's last name.
+     *
+     * @param lastName The new last name for the employee.
+     */
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    /**
+     * Prints the employee's information.
+     */
+    public void print() {
+        System.out.println("SSN: " + SSN);
+        System.out.println("First Name: " + firstName);
+        System.out.println("Last Name: " + lastName);
+    }
+}
+
+/**
+ * Represents an hourly employee.
+ */
+public class HourlyEmployee extends Employee {
+    private double salary;
+
+    /**
+     * Constructs an HourlyEmployee object with the given information.
+     *
+     * @param SSN        The employee's Social Security Number.
+     * @param firstName  The employee's first name.
+     * @param lastName   The employee's last name.
+     * @param salary     The employee's hourly salary.
+     */
+    public HourlyEmployee(String SSN, String firstName, String lastName, double salary) {
+        super(SSN, firstName, lastName);
+        this.salary = salary;
+    }
+
+    /**
+     * Gets the employee's salary.
+     *
+     * @return The employee's salary.
+     */
+    public double getSalary() {
+        return salary;
+    }
+
+    /**
+     * Sets the employee's salary.
+     *
+     * @param salary The new salary for the employee.
+     */
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    /**
+     * Computes the employee's gross pay based on hours worked.
+     *
+     * @param hoursWorked The number of hours worked.
+     * @return The employee's gross pay.
+     */
+    public double computeGrossPay(double hoursWorked) {
+        return salary * hoursWorked;
+    }
+
+    /**
+     * Computes the employee's net pay after deductions.
+     *
+     * @param deductions The total deductions from the gross pay.
+     * @return The employee's net pay.
+     */
+    public double computeNetPay(double deductions) {
+        return computeGrossPay(40) - deductions;
+    }
+}
+
+/**
+ * Represents a salaried employee.
+ */
+public class SalariedEmployee extends Employee {
+    private double salary;
+
+    /**
+     * Constructs a SalariedEmployee object with the given information.
+     *
+     * @param SSN        The employee's Social Security Number.
+     * @param firstName  The employee's first name.
+     * @param lastName   The employee's last name.
+     * @param salary     The employee's annual salary.
+     */
+    public SalariedEmployee(String SSN, String firstName, String lastName, double salary) {
+        super(SSN, firstName, lastName);
+        this.salary = salary;
+    }
+
+    /**
+     * Gets the employee's salary.
+     *
+     * @return The employee's salary.
+     */
+    public double getSalary() {
+        return salary;
+    }
+
+    /**
+     * Sets the employee's salary.
+     *
+     * @param salary The new salary for the employee.
+     */
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    /**
+     * Computes the employee's gross pay based on the annual salary.
+     *
+     * @return The employee's gross pay.
+     */
+    public double computeGrossPay() {
+        return salary / 12;
+    }
+
+    /**
+     * Computes the employee's net pay after deductions.
+     *
+     * @param deductions The total deductions from the gross pay.
+     * @return The employee's net pay.
+     */
+    public double computeNetPay(double deductions) {
+        return computeGrossPay() - deductions;
+    }
+}
+

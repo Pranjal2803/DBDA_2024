@@ -1,0 +1,31 @@
+interface CurrencyConverter {
+    double convert(double amount);
+}
+
+class RupeeToDollar implements CurrencyConverter {
+    @Override
+    public double convert(double amount) {
+        // Conversion logic from Rupees to Dollars
+        return amount * 0.012; // Assuming a conversion rate
+    }
+}
+
+class RupeeToPound implements CurrencyConverter {
+    @Override
+    public double convert(double amount) {
+        // Conversion logic from Rupees to Pounds
+        return amount * 0.008; // Assuming a conversion rate
+    }
+
+class Main {
+    public static void main(String[] args) {
+        CurrencyConverter converter1 = new RupeeToDollar();
+        double dollars = converter1.convert(1000);
+        System.out.println("1000 Rupees = " + dollars + " Dollars");
+
+        CurrencyConverter converter2 = new RupeeToPound();
+        double pounds = converter2.convert(1000);
+        System.out.println("1000 Rupees = " + pounds + " Pounds");
+    }
+}
+

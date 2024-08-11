@@ -1,0 +1,42 @@
+class Shape {
+    public void draw() {
+        System.out.println("Drawing a shape");
+    }
+}
+
+class Triangle extends Shape {
+    @Override
+    public void draw() {
+        System.out.println("Drawing a triangle");
+    }
+}
+
+class Rectangle extends Shape {
+    @Override
+    public void draw() {
+        System.out.println("Drawing a rectangle");
+    }
+}
+
+class Circle extends Shape {
+    @Override
+    public void draw() {
+        System.out.println("Drawing a circle");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Shape shape;
+
+        shape = new Triangle();
+        shape.draw(); // Output: Drawing a triangle
+
+        shape = new Rectangle();
+        shape.draw(); // Output: Drawing a rectangle
+
+        shape = new Circle();
+        shape.draw(); // Output: Drawing a circle
+    }
+}
+

@@ -1,0 +1,40 @@
+class Car {
+    public void speed() {
+        System.out.println("Car is moving");
+    }
+}
+
+class Maruti extends Car {
+    @Override
+    public void speed() {
+        System.out.println("Maruti speed is 60 km/h");
+    }
+}
+
+class Alto extends Car {
+    @Override
+    public void speed() {
+        System.out.println("Alto speed is 70 km/h");
+    }
+}
+
+class Brezza extends Car {
+    @Override
+    public void speed() {
+        System.out.println("Brezza speed is 80 km/h");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car car = new Maruti();
+        car.speed(); // Output: Maruti speed is 60 km/h
+
+        car = new Alto();
+        car.speed(); // Output: Alto speed is 70 km/h
+
+        car = new Brezza();
+        car.speed(); // Output: Brezza speed is 80 km/h
+    }
+}
+

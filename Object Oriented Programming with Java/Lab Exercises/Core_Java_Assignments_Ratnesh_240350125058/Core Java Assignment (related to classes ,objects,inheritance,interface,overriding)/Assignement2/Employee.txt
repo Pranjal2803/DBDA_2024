@@ -1,0 +1,70 @@
+interface Employee {
+    double calculateSalary();
+}
+
+class BaseEmployee implements Employee {
+    String name;
+    String id;
+
+    public BaseEmployee(String name, String id) {
+        this.name = name;
+        this.id = id;
+    }
+
+    @Override
+    public double calculateSalary() {
+        // Base implementation can be provided here, if needed
+        return 0.0;
+    }
+
+    public void displayInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("ID: " + id);
+    }
+}
+
+class Manager extends BaseEmployee {
+    double basicSalary;
+    double allowance;
+
+    public Manager(String name, String id, double basicSalary, double allowance) {
+        super(name, id);
+        this.basicSalary = basicSalary;
+        this.allowance = allowance;
+    }
+
+    @Override
+    public double calculateSalary() {
+        return basicSalary + allowance;
+    }
+}
+
+class Programmer extends BaseEmployee {
+    double basicSalary;
+    double bonus;
+
+    public Programmer(String name, String id, double basicSalary, double bonus) {
+        super(name, id);
+        this.basicSalary = basicSalary;
+        this.bonus = bonus;
+    }
+
+    @Override
+    public double calculateSalary() {
+        return basicSalary + bonus;
+    }
+}
+
+public class EmployeeSystem {
+    public static void main(String[] args) {
+        Manager manager = new Manager("John Doe", "M123", 50000, 10000);
+        Programmer programmer = new Programmer("Jane Smith", "P456", 40000, 5000);
+
+        manager.displayInfo();
+        System.out.println("Manager Salary: " + manager.calculateSalary());
+
+        programmer.displayInfo();
+        System.out.println("Programmer Salary: " + programmer.calculateSalary());
+    }
+}
+

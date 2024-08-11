@@ -1,0 +1,69 @@
+/**
+ * Represents a person with name and age.
+ */
+class Person {
+    String name;
+    int age;
+
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+/**
+ * Represents an employee, inheriting from Person.
+ */
+class Employee extends Person {
+    Employee(String name, int age) {
+        super(name, age);
+    }
+
+    void myProfession() {
+        System.out.println("I am an Employee");
+    }
+}
+
+/**
+ * Represents a teacher, inheriting from Person.
+ */
+class Teacher extends Person {
+    Teacher(String name, int age) {
+        super(name, age);
+    }
+
+    void myProfession() {
+        System.out.println("I am a Teacher");
+    }
+}
+
+/**
+ * Represents a permanent employee, inheriting from Employee.
+ */
+class PermanentEmployee extends Employee {
+    PermanentEmployee(String name, int age) {
+        super(name, age);
+    }
+}
+
+/**
+ * Represents a contract employee, inheriting from Employee.
+ */
+class ContractEmployee extends Employee {
+    ContractEmployee(String name, int age) {
+        super(name, age);
+    }
+}
+
+public class InheritanceDemo {
+    public static void main(String[] args) {
+        PermanentEmployee permanentEmployee = new PermanentEmployee("John Doe", 30);
+        ContractEmployee contractEmployee = new ContractEmployee("Jane Smith", 25);
+        Teacher teacher = new Teacher("Mr. Lee", 45);
+
+        permanentEmployee.myProfession();
+        contractEmployee.myProfession();
+        teacher.myProfession();
+    }
+}
+
