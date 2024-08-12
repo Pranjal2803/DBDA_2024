@@ -1,0 +1,32 @@
+Anomalies:-
+Anomalies in relational structures refer to inconsistencies or inaccuracies that can occur when using relational information, especially when information is added, deleted, and modified. Different types of fashion can emerge in use and relationships.
+
+
+How do Anomalies occur in DBMS?
+Exception database is a database error caused by poor management of all content stored in a flat database. It can often be eliminated by the normalization process, which divides the data to reduce uncertainty in the data. Exceptions occur if data cannot be added to the database because a required field is missing or data is missing. For example, if the database requires a primary key for all records but there is no value for a particular record, the record cannot be included. Exceptions may occur when extracting data from a file, causing the file to be dropped. For example, if your database contains information about customers and orders, deleting customer information may also delete all orders associated with that customer. When updating data in a database, exceptions can occur and cause inconsistencies or errors. For example, if your database contains information about employees and their salaries, updating the employee salary in a single record (and not in a tag of all related information) can result in inaccurate calculations and reports.
+
+
+Types of Anomalies:- 
+
+1. Insertion Anomalies
+2. Deletion Anomalies
+3. Update Anomalies.
+
+Insertion Anomalies:-
+Append exception occurs when some attributes cannot be appended to the file because there is no additional data.
+For example, if the new employee is not assigned to the department and the department does not allow priority, their information cannot be added to the table.
+
+Deletion Anomalies:-
+A deletion anomaly occurs in a database management system (DBMS) when deleting a record also unintentionally removes other valuable data.
+For example, if you want to remove Betty Flood from a table that stores teacher and department details together, you would also need to remove all data about the Geography department.
+
+Update Anomalies:-
+An update exception occurs in a database management system (DBMS) when a database update accidentally affects more than one row or column.
+This can occur if the same material is repeated over several lines, but the changes are only a few.
+For example, if an employee's address changes but only one row is updated, the record may contain inconsistent information.
+
+
+Removal of Anomalies:-
+These uncertainties can be avoided or minimized by creating data that complies with normalization principles. Normalization involves organizing data into tables and applying rules to ensure that data is stored in a consistent and meaningful way. Standardization helps eliminate anomalies and improve overall data quality by reducing data redundancy and ensuring data integrity.
+
+

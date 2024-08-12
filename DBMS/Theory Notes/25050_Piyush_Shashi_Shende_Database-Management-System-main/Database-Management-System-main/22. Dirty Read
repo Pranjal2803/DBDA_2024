@@ -1,0 +1,20 @@
+Dirty Read
+Definition:- A dirty read in SQL occurs when a transaction reads data that has been modified by another transaction but has not yet been processed. In other words, one process is reading illegal data from another process, which can lead to inaccurate or inconsistent results. This occurs when after changing an item, the change cannot be made due to a system failure, network error, or other issue. A dirty read can occur if another transaction changes data before a time error occurs in the first transaction.
+
+To prevent dirty reads, SQL provides transaction isolation levels, which specify how transactions should be isolated from one another. The isolation levels include:-
+1. Uncommitted Read: This level allows a process to read uncommitted data from other processes, resulting in a dirty read. Read Contract: This level allows the process to only read contract data, preventing dirty reads.
+2. Repeatable read: This level prevents dirty reads and ensures that a process always reads the same data for a query, even if another process changes the data at the same time.
+3. Serializable: This level provides the highest level of isolation and ensures that changes are committed, preventing dirty reads and other exceptions. protection. There 4. are four main types of matching problems: dirty reads, missing reads, non-repeat reads, and ghost reads.
+5. Dirty Read: A dirty read occurs when a process is allowed to read a row that has been modified by another process that has not yet been processed. It often occurs because there are many processes that are not performed at the same time.
+
+
+Advantages of Dirty Read:- 
+Increase concurrency: Dirty reads can increase the concurrency level of the database system as transactions are allowed to misread data. This increases performance and efficiency.
+Reduced lock overhead: Since dirty text does not need to be locked, the overhead associated with acquiring and releasing locks can be reduced.
+Faster response time: Dirty reads can improve the response time of database queries because transactions can read data without waiting for other transactions to submit.
+
+Disadvantages of Dirty Read
+Inconsistent data: Dirty data can cause incorrect and inaccurate data because the change will be reading data modified by other processes that still fail. This may lead to errors and inaccuracies in the data.
+Inappropriate results: Dirty reads can lead to suspicious errors because the data being read may be modified before the conversion is complete.
+Data integrity issues: Dirty reads can cause data problems because changes may read inconsistent or missing data.
+

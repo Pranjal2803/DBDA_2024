@@ -1,0 +1,17 @@
+Failures and their types
+Definition:- Failure is basically when the database fails to do business or some type of loss occurs in the database. There are the following types of malfunctions that may occur and lead to business losses:-
+
+Transaction Error: An error that occurs when a transaction cannot be completed or accepted. Hardware failure can be considered as hardware failure. This type of failure, also known as migration, can also occur due to incorrect parameter values ​​or operational reasons.
+System error: Some operations performed during the transaction are caused by errors such as dividing by number or zero. This type of failure, also known as migration, can also occur due to incorrect parameter values ​​or operational reasons. Additionally, users may interrupt the process once it is completed, which may result in work disruption.
+Local error: This actually happens when we release a transaction, but some event will occur that will cause the change. This type of error is a local error. A simple example is that data changes may not be visible. When we want to borrow money from an insufficient account, this will cause our request or job to be cancelled. And this exception must be programmed in the exchange itself so that it is not considered a failure.
+Concurrency Control Execution: Concurrency control violates serializability so we may decide to abort and restart the process or say many processes are dead.
+Disk Failure: This type of failure occurs when some disk loses data due to read or write error or disk read/write head loss. This can occur during read/write operations in transactions.
+Damage: These are also called physical problems and usually refer to a variety of problems, such as power outage or air conditioning failure, fire, theft, malicious activity, accidental overwriting of discs or tapes, and staff inserting the wrong tapes.
+
+
+Why Recovery are Required in Database?
+Human error: Human errors such as omitting errors, editing or writing incorrect data, or faulty data can lead to inconsistent data. Recovery can help recover lost or damaged data and return it to its correct state.
+Security Risks: Security breaches such as theft or unauthorized access can compromise the integrity of your data. Recovery can help restore data to a consistent state and prevent further data loss.
+Hardware upgrade: When the DBMS is upgraded to new hardware, the migration process may result in data loss or corruption. Resilience mechanisms can help ensure the success of data migration and maintain data integrity.
+Natural disasters: Natural disasters such as earthquakes, floods or fires can damage equipment that stores data, causing data loss. Recovery can help restore data from backups and reduce the impact of damage.
+
