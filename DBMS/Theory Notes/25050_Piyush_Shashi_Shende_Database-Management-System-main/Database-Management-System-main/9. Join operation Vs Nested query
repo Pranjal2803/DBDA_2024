@@ -1,0 +1,75 @@
+Join operation vs. Nested query
+
+
+Join operation:- A join combines data from two or more tables into one or more data structures. Joining is done using the JOIN keyword in SQL; this returns a result containing rows from all tables joined.
+
+Example:- 
+
+Table1
+ID | Name
+1 | John
+2 | Sarah
+3 | David
+
+Table2
+ID | Address
+1 | 123 Main St.
+2 | 456 Elm St.
+4 | 789 Oak St.
+
+Result:
+ID | Name | Address
+1 | John | 123 Main St.
+2 | Sarah | 456 Elm St.
+
+
+Nested query:- A nested query is a SQL query embedded within another SQL query. It is used to extract data from one or more tables based on criteria using the results of other queries. The nested query is placed first and its result is used to evaluate the outer query.
+
+Example:-
+
+Table1
+ID | Name
+1 | John
+2 | Sarah
+3 | David
+
+Table2
+ID | Address
+1 | 123 Main St.
+2 | 456 Elm St.
+4 | 789 Oak St.
+
+Result:
+Name
+John
+Sarah
+
+
+Tuple Relational Calculus (TRC):- Tuple Relational Calculus (TRC) is an unstructured query used to retrieve data from tables in Relational Database Management Systems (RDBMS). TRC is based on the concept of tuples defined between values ​​that represent a row or file in a database. TRC is a declarative language, meaning that it specifies what data is required from the database, rather than how to retrieve it. TRC queries are expressed as logical formulas that describe the desired tuples.
+
+Syntax:- { t | P(t) }
+t = tuple variable
+P(t) = logical formula
+{} = curly braces(used to indicate that the expression is a set of tuples)
+
+
+Tuple Relational Query
+
+Query:- {t| P(t)}
+t = resulting tuples, 
+P(t) = known as Predicate and these are the conditions that are used to fetch t. Thus, it generates a set of all tuples t, such that Predicate P(t) is true for t.
+
+
+Domain Relational Calculus (DRC):- Domain Relational Analysis (DRC) is a general query for relational data that uses variable names to manipulate row values. DRC is a non-procedural language that describes questions but does not provide a way to solve them. The relational element is a type of unstructured query that is functionally equivalent to the tuple relational calculus. The definition only contains a description of the problem, not a way to solve it.
+
+{<a1,a2,a3,.....an> | P(a1,a2,a3,.....an)}
+{ < x1, x2, x3, ..., xn > | P (x1, x2, x3, ..., xn ) }
+
+
+Predicate Calculus Formula:
+
+Set of all comparison operators
+Set of connectives like and, or, not
+Set of quantifiers
+
+Tuple Relational Calculus, Tuple Relational Query, Domain Relational Calculus

@@ -1,0 +1,50 @@
+Concurrency Control in DBMS:- Concurrency control is a very important concept of DBMS which ensures the simultaneous execution or manipulation of data by several processes or users without resulting in data inconsistency. Concurrency Control deals with interleaved execution of more than one transaction.
+
+Completing one transaction at a time increases the waiting time for other transactions, which slows down the overall process.
+Therefore, many changes need to be made to increase the overall capacity and performance of the system.
+Not compatible.
+The main purpose of database management is to ensure that the execution of transactions does not lead to loss of data consistency.
+Since serializable projects all maintain the same data, the concept of serializability can be used to achieve this goal.
+However, not all instances containing consistent data are serializable.
+But there are also simpler methods.
+The first is that the integration can be managed independently by dividing the data into subdatabases according to data parameters.
+
+Concurrency Control Problems:- There are several problems that arise when numerous transactions are executed simultaneously in a random manner. The database transaction consists of two major operations “Read” and “Write”. It is very important to manage these operations in the concurrent execution of the transactions in order to maintain the consistency of the data. 
+
+Dirty Read Problem(Write-Read conflict)
+The dirty read problem occurs when a transaction updates an object and fails due to a random event, but another transaction reads the updated value before the transaction performs the reverse.
+This creates inconsistencies in the database.
+The dirty read problem occurs when there is a conflict between reading and writing changes to the file.
+The incomplete update problem can be explained by the following conditions under the T1 and T2 transitions.
+Don't follow the changes.
+
+Lost Update Problem
+The incomplete update issue occurs when two or more processes modify the same data, causing the update to be overwritten by another process or lost.
+The missing update issue can be explained by the following scenarios in both T1 and T2 transactions.
+T1 updates the value of the data and performs a commit. loss.
+
+
+Disadvantages of Concurrency:-
+Deadlock: A deadlock can occur when two or more processes wait for each other to release resources, causing traffic congestion that prevents the processes from completing. Deadlocks can be difficult to identify and resolve and can result in decreased performance and increased latency.
+Reduce parallelism: Concurrency control limits the number of users or applications that can access data simultaneously. This can reduce concurrency and performance on systems with high concurrency levels.
+Complexity: Implementing integrated management systems can be complex, especially in distributed systems or systems with transactional logic. This difficulty can lead to development and repair costs.
+Inconsistencies: In some cases, relationship management can lead to inconsistencies in data. For example, reverse operations can leave data in an inconsistent state, or long processing times can cause other operations to wait longer, resulting in inaccurate and erroneous data.
+
+Advantages of Concurrency:-
+Waiting Time: It refers to the period during which the transaction is ready but has not yet been completed by the system. This is called waiting time. Therefore concurrency reduces waiting time.
+Response time: The time taken to get a response from the CPU for the first time is called response time. Therefore, concurrency reduces reaction time. Resource Usage: The use of resources in a system is called resource usage. More than one operation can be carried out in the system at the same time. Therefore, the merger leads to higher expenses.
+Productivity: The ratio of output rate to input is called productivity. Therefore, concurrency leads to greater efficiency.
+
+
+Transaction:- A transaction is a collection of functions that perform a function in a database application. Every operation is an atomic and unitary unit. Therefore, we want to make sure that the process does not violate any data-related restrictions. That is, if the data is kept the same at the beginning of the transaction, it should be the same when the transaction is completed. However, since A's debt or B's receivables must be completed before the other during the transaction, temporary permission must be given otherwise.
+
+Properties of a Transaction:-
+1. Atomicity: As a transaction is a set of logically related operations, either all of them should be executed or none. A debit transaction discussed above should either execute all three operations or none. If the debit transaction fails after executing operations 1 and 2 then its new value of 4000 will not be updated in the database which leads to inconsistency.
+2. Consistency: If operations of debit and credit transactions on the same account are executed concurrently, it may leave the database in an inconsistent state.
+3. Isolation: The result of a transaction should not be visible to others before the transaction is committed. For example, let us assume that A’s balance is Rs. 5000 and T1 debits Rs. 1000 from A. A’s new balance will be 4000. If T2 credits Rs. 500 to A’s new balance, A will become 4500, and after this T1 fails. Then we have to roll back T2 as well because it is using the value produced by T1. So transaction results are not made visible to other transactions before it commits.
+4. Durable: Once the database has committed a transaction, the changes made by the transaction should be permanent. e.g.; If a person has credited $500000 to his account, the bank can’t say that the update has been lost. To avoid this problem, multiple copies of the database are stored at different locations.
+
+Schedule:- A schedule is a series of operations from one or more transactions.
+Serial Schedule:- When one process is completed before the beginning of another, the planning is called serial planning. The serial time is always the same.
+Concurrent Schedule:- When the operation of the process is affected by the operation of other scheduled operations, it is called concurrent scheduling.
+

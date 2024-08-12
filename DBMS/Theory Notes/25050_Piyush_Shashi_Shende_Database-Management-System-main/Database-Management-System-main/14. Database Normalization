@@ -1,0 +1,57 @@
+Database Normalization:- 
+Definition:- Database normalization is the process of structuring database objects to reduce or eliminate redundant data (having the same data but in different locations). Data redundancy does not necessarily increase data size, as the same data is repeated in different places. Inconsistencies may also occur during insertion, deletion and update operations.
+
+
+Functional Dependency:-
+Definition:- The dependency function is the boundary between two sets of objects in the repository. Functional dependency A -> B means that the value of B is the same for all instances of the value of A. The value of A changes.
+
+
+Types:-
+1. Trivial Functional Dependency
+2. Non Trivial Functional Dependencies
+3. Semi Non Trivial Functional Dependencies
+
+
+Advantages of Functional Dependency:-
+The database’s data quality is maintained using it. 
+It tells the truth about database creation.
+Helps clearly define the limitations and importance of storage space.
+It is important to identify bad design.
+Finding the underlying key to the relationship is the first step in the normalization process. It is impossible to identify potential keys and normalize the repository without success.
+
+
+Why do we need Normalization?
+The main goal of normalizing the relationship is to eliminate the following abnormalities. Failure to reduce redundancy can lead to data redundancy, which can compromise data integrity and cause other problems as data grows. Normalization has a number of techniques that will help you create a good database structure.
+Missing:- For example, if the database requires a primary key for all records but there is no value for a particular record, the record cannot be included.
+Data lost. For example, if your database contains information about customers and orders, deleting customer information may also delete all orders associated with that customer.
+Update exceptions:- Update exceptions can occur when updating information in a database and cause inconsistencies or errors. For example, if a database contains information about employees and their salaries, updating the employee's salary in a single record instead of all records may cause incorrect calculations and reporting.
+Mistake:- For example, if a database contains information about employees and their salaries, updating the employee's salary in a single record instead of all records may cause incorrect calculations and reporting.
+
+
+Features of Database Normalization:-
+1. Improved database design: Standardization helps in improving the overall design of the database. Standardization makes database creation and maintenance easier by organizing data in a structured and systematic way. It also facilitates data transfer and can adapt to business needs.
+2. Avoiding Unexpected Changes: Normalization helps prevent unexpected changes that can occur when a change to one record in one table affects many records in another table. Normalization ensures that each table has only one type of data and that the relationship between tables is clearly defined, which helps prevent errors.
+3. Standardization: Standardization helps standardize the information in the database. Modeling helps ensure that data is stored in a coherent and consistent manner by organizing data into tables and identifying relationships between them.
+
+
+Normals Forms in DBMS:- 
+First Normal Form (1NF):- If each character in the relationship is an entity, the relationship is always in the first form.
+Second Normal Form (2NF):- A relation is in the second form (2NF) if it is in the first normal form and all non-trivial attributes are functionally dependent on the key.
+Third Normal Form (3NF):- If there is no variable change between non-significant features and the relationship is in the second form, the relationship is always in the third form. A relation is in 3NF if at least one of the following conditions is true for every non-trivial function X → Y.
+Boyce-Codd Normal Form (BCNF):- For BCNF the relation should satisfy the below conditions
+Fourth Normal Form (4NF):- A relation R is in 4NF if and only if, It must be in Boyce-Codd Normal Form (BCNF).
+Fifth Normal Form (5NF):- A relation R belongs to 5NF if and only if it satisfies the following conditions. R must belong to 4NF. Further damage (link dependency) is not possible.
+
+
+Advantages of Normalization:-
+Normalization eliminates data redundancy and ensures all data is stored in one place, reducing the risk of inconsistent data and making it easier to maintain accurate data.
+Normalization helps ensure that each table is only related, which increases the overall data integrity of the storage.
+Make changes to multiple settings. Data can be expanded to meet future needs and reduce data duplication.
+The information is accurate and consistent.
+
+Disadvantages of Normalization:-
+Normalization can lead to increased performance by requiring additional join operations and potentially slowing down query execution times.
+Join the reclaim.
+Normalization can complicate database design, especially if the data structure is not well understood or the normalization process is not successful.
+
+

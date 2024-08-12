@@ -1,0 +1,27 @@
+Canonical Cover:-
+
+Definition:- is a set of functional dependencies that is minimal, irreducible, and equivalent to the original set of dependencies. A minimal cover is a set of dependencies that is minimal but not necessarily irreducible.
+
+
+Reduction:- The first step is to reduce the original set of work progress to an equivalent version that has the same closure as the original set but with fewer dependencies. This is done by removing unnecessary dependencies and combining dependencies with multiple elements on the left.
+Elimination:- The second step is to remove all extraneous items from the left side of the dependency. A feature is considered foreign if it can be removed from the left without changing the implicit dependency.
+Minimization:- The final step is to reduce the number of dependencies by eliminating interference caused by other dependencies in the collection.
+
+
+Properties:-
+1. F logically implies all dependencies in Fc.
+2. Fc logically implies all dependencies in F.
+3. Functional dependencies in Fc have no extrinsic properties.
+4. All remaining jobs in FC are unique.
+
+
+Features of the Canonical Cover:-
+1. Minimum: A specification is the smallest number of dependencies that can be derived from the set of dependencies, that is, it has the least number of dependencies that must represent the same constraints.
+2. Lossless: The specification scope preserves all functional dependencies of the original dependency set, meaning it does not lose any information.
+3. Unique: A specification is unique, meaning there is only one specification for a set of dependencies.
+4. Discretion: The specification is optional, meaning it is not neutral or irrelevant.
+5. Reduce information redundancy: Specification scope helps reduce information redundancy by eliminating unnecessary dependencies that can be inferred from other dependencies.
+6. Improved query performance: Canonical scope helps improve query performance by reducing the number of joins and data duplications in the database.
+7. Ease of document maintenance: Canonical scope makes it easier to modify, update, and delete documents in the database by reducing the number of sequential steps that must be considered.
+
+

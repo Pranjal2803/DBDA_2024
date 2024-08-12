@@ -1,0 +1,28 @@
+ACID Properties:-
+
+Atomicity
+Consistency
+Isolation
+Durability
+
+Atomicity:- Atomicity ensures that changes are handled as a single transaction. All operations in the transaction are either successful or unsuccessful. If part of the transaction fails, all transactions are returned to their original state, ensuring data consistency and integrity.
+
+Consistency:- Consistency ensures that data is transferred from one state to another. The data is in the same state before and after the transaction. Constraints such as unique keys and foreign keys need to be maintained to ensure data consistency.
+
+Isolation:- Isolation allows multiple processes to run simultaneously without interfering with each other. Each process must be isolated from other processes until it is completed. This isolation prevents dirty reads, non-repeat reads, and ghost reads.
+
+Durability:- Durability ensures that changes made after a transaction is committed are permanent and unaffected by subsequent failures. Changes made to the system are permanently saved to the file and can be restored even if the system crashes.
+
+
+Advantages of ACID Properties:-
+Data consistency: ACID features ensure that data remains consistent and accurate after each transaction is completed.
+Data Integrity: ACID tools maintain data integrity by ensuring that all changes made to the data are stable and not lost.
+Concurrency control: ACID tools help manage multiple processes simultaneously by preventing conflicts between them.
+Durability: ACID components ensure that in the event of a failure or crash, the system can recover data during failure or loss.
+
+Disadvantages of ACID Properties:-
+Performance: ACID products may cause physical performance issues because they require additional processing to ensure data consistency and integrity.
+Scalability: In large systems where many processes occur simultaneously, ACID features can cause scalability issues.
+Complexity: Using ACID products complicates the process and requires significant expertise and resources. They provide reliable and consistent information
+Management: Completeness, accuracy and reliability of information. However, in some cases, the overhead of using ACID objects can cause performance and scalability issues. It is therefore important to balance the quality of ACID products with the specific needs and requirements of the system.
+
