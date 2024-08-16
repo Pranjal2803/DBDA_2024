@@ -1,0 +1,103 @@
+/**
+ * Abstract base class representing a bank account.
+ */
+public abstract class BankAccount {
+    protected String accountNumber;
+    protected double totalBalance;
+
+    /**
+     * Constructs a BankAccount object with the given account number and initial balance.
+     *
+     * @param accountNumber The account number.
+     * @param initialBalance The initial balance of the account.
+     */
+    public BankAccount(String accountNumber, double initialBalance) {
+        this.accountNumber = accountNumber;
+        this.totalBalance = initialBalance;
+    }
+
+    /**
+     * Deposits the specified amount into the account.
+     *
+     * @param amount The amount to deposit.
+     */
+    public void deposit(double amount) {
+        totalBalance += amount;
+    }
+
+    /**
+     * Withdraws the specified amount from the account.
+     *
+     * @param amount The amount to withdraw.
+     */
+    public void withdraw(double amount) {
+        if (amount <= totalBalance) {
+            totalBalance -= amount;
+        } else {
+            System.out.println("Insufficient funds");
+        }
+    }
+
+    /**
+     * Returns the current balance of the account.
+     *
+     * @return The account balance.
+     */
+    public double getBalance() {
+        return totalBalance;
+    }
+}
+
+/**
+ * Represents a checking account with a fee.
+ */
+public class CheckingAccount extends BankAccount {
+    private double fee;
+
+    /**
+     * Constructs a CheckingAccount object with the given account number, initial balance, and fee.
+     *
+     * @param accountNumber The account number.
+     * @param initialBalance The initial balance of the account.
+     * @param fee The fee associated with the account.
+     */
+    public CheckingAccount(String accountNumber, double initialBalance, double fee) {
+        super(accountNumber, initialBalance);
+        this.fee = fee;
+    }
+
+    /**
+     * Deducts the fee from the account balance.
+     */
+    public void deductFee() {
+        totalBalance -= fee;
+    }
+}
+
+/**
+ * Represents a saving account with an interest rate.
+ */
+public class SavingAccount extends BankAccount {
+    private double interestRate;
+
+    /**
+     * Constructs a SavingAccount object with the given account number, initial balance, and interest rate.
+     *
+     * @param accountNumber The account number.
+     * @param initialBalance The initial balance of the account.
+     * @param interestRate The interest rate applied to the account.
+     */
+    public SavingAccount(String accountNumber, double initialBalance, double interestRate) {
+        super(accountNumber, initialBalance);
+        this.interestRate = interestRate;
+    }
+
+    /**
+     * Calculates and adds interest to the account balance.
+     */
+    public void addInterest() {
+        double interest = totalBalance * interestRate;
+        totalBalance += interest;
+    }
+}
+

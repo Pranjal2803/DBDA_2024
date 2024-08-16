@@ -1,0 +1,44 @@
+Interface assignment
+
+1) Banking Management System
+
+a) create Account interface that defines basic operations(abstract method) like deposit, withdraw, and getBalance.
+
+b) create a BankAccount is a base class implementing the Account interface, representing a generic bank account.
+
+c) SavingsAccount and CurrentAccount are subclasses of BankAccount representing specific types of accounts.
+ override methods like deposit and withdraw in SavingsAccount and CurrentAccount to provide specific behavior f for those account types.
+
+d) Demonstrate the usage of these classes in the BankSystem class(class with main method) by creating object of SavingsAccount and CurrentAccount and access the functionaliy of  deposit and withdrawal getBalance.
+
+
+2) Employee Management System
+
+a) create Employee interface defining the calculateSalary() method.
+
+b) create a class called BaseEmployee  implements the Employee interface and serves as the base class for all types of employees.
+
+c) Manager and Programmer classes inherit from BaseEmployee and provide their own implementations of the calculateSalary() method based on their specific roles.Both Manager and Programmer classes have constructors that initialize their attributes.
+
+d)Demonstrate the usage of these classes in EmployeeSystem class  by creating instances of Manager and Programmer objects and displaying their information using the displayInfo(),finding their salary using calculateSalary method.
+
+
+3) PaymentGatewaySystem
+
+a) PaymentGateway is an interface defining a method processPayment to process payments.
+
+b) Bank is an abstract class representing a generic bank, implementing the PaymentGateway interface and providing common functionalities like name and account number.
+
+c) SBI and HDFC is a concrete class representing a specific bank, extending the Bank class. It implements the processPayment method and provide the specific functionality to the respective bank(SBI,HDFC)
+
+D) The main method in the BankingPaymentGateway class demonstrates how to use the banking payment gateway by creating an instance of SBI ,HDFC and processing a payment.
+  
+
+
+
+
+
+
+
+
+

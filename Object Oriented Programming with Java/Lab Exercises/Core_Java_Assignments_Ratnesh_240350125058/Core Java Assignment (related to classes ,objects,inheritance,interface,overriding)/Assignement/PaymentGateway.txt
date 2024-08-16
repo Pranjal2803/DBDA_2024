@@ -1,0 +1,49 @@
+interface PaymentGateway {
+    void processPayment(double amount);
+}
+
+abstract class Bank implements PaymentGateway {
+    String name;
+    String accountNumber;
+
+    public Bank(String name, String accountNumber) {
+        this.name = name;
+        this.accountNumber = accountNumber;
+    }
+
+    @Override
+    public abstract void processPayment(double amount);
+}
+
+class SBI extends Bank {
+    public SBI(String accountNumber) {
+        super("SBI", accountNumber);
+    }
+
+    @Override
+    public void processPayment(double amount) {
+        System.out.println("Payment processed through SBI: " + amount);
+    }
+}
+
+class HDFC extends Bank {
+    public HDFC(String accountNumber) {
+        super("HDFC", accountNumber);
+    }
+
+    @Override
+    public void processPayment(double amount) {
+        System.out.println("Payment processed through HDFC: " + amount);
+    }
+}
+
+public class BankingPaymentGateway {
+    public static void main(String[] args) {
+        PaymentGateway sbi = new SBI("SB12345");
+        PaymentGateway hdfc = new HDFC("HDF12345");
+
+        sbi.processPayment(1000);
+        hdfc.processPayment(2000);
+    }
+}
+

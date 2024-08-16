@@ -1,0 +1,29 @@
+public class Animal {
+    public void makeSound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+public class Dog extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Cat extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Cat meows");
+    }
+
+public class Main {
+    public static void main(String[] args) {
+        Animal animal = new Dog(); // Polymorphism: Animal reference pointing to Dog object
+        animal.makeSound(); // Output: Dog barks
+
+        animal = new Cat(); // Polymorphism: Animal reference pointing to Cat object
+        animal.makeSound(); // Output: Cat meows
+    }
+}
+

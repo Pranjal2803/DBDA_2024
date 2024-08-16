@@ -1,0 +1,155 @@
+/**
+ * Represents an author of a book.
+ */
+public class Author {
+    private String name;
+    private String email;
+    private char gender;
+
+    /**
+     * Constructs an Author object with the given name, email, and gender.
+     *
+     * @param name   The author's name.
+     * @param email  The author's email.
+     * @param gender The author's gender ('m' or 'f').
+     */
+    public Author(String name, String email, char gender) {
+        this.name = name;
+        this.email = email;
+        this.gender = gender;
+    }
+
+    /**
+     * Gets the author's name.
+     *
+     * @return The author's name.
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Gets the author's email.
+     *
+     * @return The author's email.
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    /**
+     * Sets the author's email.
+     *
+     * @param email The new email for the author.
+     */
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    /**
+     * Gets the author's gender.
+     *
+     * @return The author's gender ('m' or 'f').
+     */
+    public char getGender() {
+        return gender;
+    }
+
+    /**
+     * Returns a string representation of the author.
+     *
+     * @return A string in the format "name (gender) at email".
+     */
+    public String toString() {
+        return name + " (" + gender + ") at " + email;
+    }
+}
+
+/**
+ * Represents a book.
+ */
+public class Book {
+    private String name;
+    private Author author;
+    private double price;
+    private int qty;
+
+    /**
+     * Constructs a Book object with the given name, author, price, and quantity.
+     *
+     * @param name   The book's name.
+     * @param author The book's author.
+     * @param price  The book's price.
+     * @param qty    The book's quantity.
+     */
+    public Book(String name, Author author, double price, int qty) {
+        this.name = name;
+        this.author = author;
+        this.price = price;
+        this.qty = qty;
+    }
+
+    /**
+     * Gets the book's name.
+     *
+     * @return The book's name.
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Gets the book's author.
+     *
+     * @return The book's author.
+     */
+    public Author getAuthor() {
+        return author;
+    }
+
+    /**
+     * Gets the book's price.
+     *
+     * @return The book's price.
+     */
+    public double getPrice() {
+        return price;
+    }
+
+    /**
+     * Sets the book's price.
+     *
+     * @param price The new price for the book.
+     */
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    /**
+     * Gets the book's quantity.
+     *
+     * @return The book's quantity.
+     */
+    public int getQty() {
+        return qty;
+    }
+
+    /**
+     * Sets the book's quantity.
+     *
+     * @param qty The new quantity for the book.
+     */
+    public void setQty(int qty) {
+        this.qty = qty;
+    }
+
+    /**
+     * Returns a string representation of the book.
+     *
+     * @return A string in the format "'book-name' by author-name (gender) at email".
+     */
+    public String toString() {
+        return "'" + name + "' by " + author.toString();
+    }
+}
+

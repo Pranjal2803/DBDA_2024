@@ -1,0 +1,82 @@
+interface Account {
+    void deposit(double amount);
+    void withdraw(double amount);
+    double getBalance();
+}
+
+class BankAccount implements Account {
+    protected double balance;
+
+    @Override
+    public void deposit(double amount) {
+        balance += amount;
+    }
+
+    @Override
+    public void withdraw(double amount) {
+        if (balance >= amount) {
+            balance -= amount;
+        } else {
+            System.out.println("Insufficient funds");
+        }
+    }
+
+    @Override
+    public double getBalance() {
+        return balance;
+    }
+}
+
+class SavingsAccount extends BankAccount {
+    private double interestRate;
+
+    public SavingsAccount(double interestRate) {
+        this.interestRate = interestRate;
+    }
+
+    @Override
+    public void withdraw(double amount) {
+        if (balance - amount >= 500) { // Minimum balance check
+            super.withdraw(amount);
+        } else {
+            System.out.println("Minimum balance not maintained");
+        }
+    }
+
+    public void addInterest() {
+        balance += balance * interestRate;
+    }
+}
+
+class CurrentAccount extends BankAccount {
+    private double overdraftLimit;
+
+    public CurrentAccount(double overdraftLimit) {
+        this.overdraftLimit = overdraftLimit;
+    }
+
+    @Override
+    public void withdraw(double amount) {
+        if (balance + overdraftLimit >= amount) {
+            balance -= amount;
+        } else {
+            System.out.println("Overdraft limit exceeded");
+        }
+    }
+}
+
+public class BankSystem {
+    public static void main(String[] args) {
+        SavingsAccount savingsAccount = new SavingsAccount(0.05);
+        savingsAccount.deposit(1000);
+        savingsAccount.withdraw(500);
+        savingsAccount.addInterest();
+        System.out.println("Savings Account Balance: " + savingsAccount.getBalance());
+
+        CurrentAccount currentAccount = new CurrentAccount(500);
+        currentAccount.deposit(2000);
+        currentAccount.withdraw(2500);
+        System.out.println("Current Account Balance: " + currentAccount.getBalance());
+    }
+}
+
