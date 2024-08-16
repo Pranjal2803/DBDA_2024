@@ -1,0 +1,47 @@
+USER ADDITION AND PERMNISSION
+1. Change the shell of user 3 to 'nologin'. Now login as user4 and try to
+switch to user3. Observe the result
+2. Login as root, create a file 'filewithacl' and apply acl on it in such
+a way that only user5 is able to read
+and write in to it. 
+
+root@ubuntu:/home/paras/dbda# sudo useradd user3 -m -s /bin/bash
+root@ubuntu:/home/paras/dbda# sudo useradd user4 -m -s /bin/bash
+root@ubuntu:/home/paras/dbda# sudo useradd user5 -m -s /bin/bash
+root@ubuntu:/home/paras/dbda# sudo passwd user3
+New password: 
+BAD PASSWORD: The password is shorter than 8 characters
+Retype new password: 
+passwd: password updated successfully
+root@ubuntu:/home/paras/dbda# sudo passwd user4
+New password: 
+BAD PASSWORD: The password is shorter than 8 characters
+Retype new password: 
+passwd: password updated successfully
+root@ubuntu:/home/paras/dbda# sudo passwd user5
+New password: 
+BAD PASSWORD: The password is shorter than 8 characters
+Retype new password: 
+passwd: password updated successfully
+root@ubuntu:/home/paras/dbda# sudo usermod -L user3
+root@ubuntu:/home/paras/dbda# su user4
+user4@ubuntu:/home/paras/dbda$ su user3
+Password: 
+su: Authentication failure
+oot@ubuntu:/home/paras/dbda# sudo useadd user5
+sudo: useadd: command not found
+root@ubuntu:/home/paras/dbda# sudo useradd user5
+useradd: user 'user5' already exists
+root@ubuntu:/home/paras/dbda# touch filewithacl
+root@ubuntu:/home/paras/dbda# chown user5 filewithacl
+root@ubuntu:/home/paras/dbda# chmod 0600 filewithacl
+root@ubuntu:/home/paras/dbda# ls -l
+total 36
+-rwxrwxr-x 1 paras paras    568 May 26 23:45 access.sh
+-rw-rw-rw- 1 moe   stooges    0 May 26 23:08 acl_file
+rw------- 1 user5 root       0 May 27 01:12 filewithacl
+-
+
+user4@ubuntu:/home/paras/dbda$ 
+
+
